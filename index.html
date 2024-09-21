@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./src/input.css">
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main class="flex flex-col items-center justify-center border-2 border-red-600 h-screen p-4">
+        <section id="pesquisa" class=" mb-3 w-full">
+            <form class="border-2 bg-white border-black rounded-t-lg pl-4 flex justify-between items-center" >
+                <i class="fa-solid fa-location-dot"></i>
+                <input class="h-11 text-center w-full" type="search" name="city_name" id="city_name" placeholder="Buscar Cidade">
+                <button class="h-11 bg-blue-600 w-11 rounded-tr-md" type="submit" id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </section>
+        <section id="mostrar" class="border-2 border-black w-full rounded-b-lg ">
+            <div id="section-content" class="flex flex-col bg-purple-700 opacity-80 w-full text-white ">
+
+                <div class="h-5 text-xl text-right p-4 pb-10 opacity-100" id="cidade">cidade</div>
+                <div class="h-50 text-7xl flex items-center justify-center flex-col">
+                    <div class="mb-5 flex justify-center">
+                        <img src="" alt="" id="img">
+                            <div id="temperatura">00Cº</div>
+                    </div>
+                    <div class="text-xl" id="descricao"></div>
+                </div>
+
+                <div id="info" class="flex flex-wrap justify-evenly">
+                    <div>
+                        <div class="info flex flex-col justify-evenly">
+                            <h1 class="text-center">Maxima</h1>
+                            <div class="flex justify-evenly items-center">
+                                <i class="fa-solid fa-temperature-arrow-up text-xl text-red-400"></i>
+                                <p id="maxtemp" class="text-xl font-bold ">000</p>
+                            </div>
+                        </div>
+                        <div class="info flex flex-col justify-evenly">
+                            <h1 class="text-center">Minima</h1>
+                            <div class="flex justify-evenly items-center">
+                                <i class="fa-solid fa-temperature-arrow-down text-xl text-blue-400"></i>
+                                <p id="mintemp" class="text-xl font-bold">000</p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="info flex flex-col justify-evenly">
+                            <h1 class="text-center">Vento</h1>
+                            <div class="flex justify-evenly items-center">
+                                <i class="fa-solid fa-wind text-xl text-blue-400"></i>
+                                <p id="vento" class="text-xl font-bold">000</p>
+                            </div>
+                        </div>
+                        <div class="info flex flex-col justify-evenly">
+                            <h1 class="text-center">Umidade</h1>
+                            <div class="flex justify-evenly items-center">
+                                <i class="fa-solid fa-droplet text-xl text-blue-400"></i>
+                                <p id="umidade" class="text-xl font-bold">000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="alerta" class="bg-white text-xl"></div>
+        
+        
+    </main>
+    <script src="./src/script.js"></script>
+</body>
+</html>
